@@ -8,11 +8,11 @@ import { moveKnight, canMoveKnight } from './Game'
 const { arrayOf, number } = React.PropTypes
 
 class Board extends Component {
-  static propTypes = {
-    knightPosition: arrayOf(
-      number.isRequired
-    ).isRequired
-  }
+  // static propTypes = {
+    // knightPosition: arrayOf(
+      // number.isRequired
+    // ).isRequired
+  // }
 
   handleSquareClick (toX, toY) {
     if (canMoveKnight(toX, toY)) {
@@ -21,17 +21,11 @@ class Board extends Component {
   }
 
   renderPiece (x, y) {
-    const [wN1X, wN1Y] = this.props.knightPosition
-    // const [wN1X, wN1Y] = pieces.knight.white[0]
-    // const [wN2X, wN2Y] = pieces.knight.white[1]
+    const [wN1, wN2] = this.props.knightPosition
 
-    // if ((x === wN1X && y === wN1Y) ||
-      // (x === wN2X && y === wN2Y)) {
-      // return <Knight />
-    // }
-
-    if (x === wN1X && y === wN1Y) {
-      return <Knight x={x} y={y} />
+    if ((x === wN1[0] && y === wN1[1]) ||
+      (x === wN2[0] && y === wN2[1])) {
+      return <Knight />
     }
   }
 

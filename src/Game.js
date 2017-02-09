@@ -8,8 +8,7 @@ let observer = null
 function emitChange (itemType) {
   switch (itemType) {
     case 'knight':
-      observer(wN1Pos)
-      // observer(wN2Pos)
+      observer([wN1Pos, wN2Pos])
       break
     default:
       console.log('default in emit change switch')
