@@ -21,9 +21,13 @@ class Board extends Component {
   }
 
   renderPiece (x, y) {
-    const [knightX, knightY] = this.props.knightPosition
+    const [wN1X, wN1Y] = pieces.knight.white[0]
+    const [wN2X, wN2Y] = pieces.knight.white[1]
 
-    if (x === knightX && y === knightY) return <Knight />
+    if ((x === wN1X && y === wN1Y) ||
+      (x === wN2X && y === wN2Y)) {
+      return <Knight />
+    }
   }
 
   renderSquare (i) {
