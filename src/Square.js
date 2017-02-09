@@ -13,11 +13,10 @@ export default class Square extends Component {
 
     return (
       <div style={{
-        backgroundColor: fill,
-        color: stroke,
-        width: '100%',
-        height: '100%'
-      }}>
+          backgroundColor: fill,
+          color: stroke
+        }}
+        className='square'>
         {this.props.children}
       </div>
     )
