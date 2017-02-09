@@ -25,11 +25,8 @@ class Knight extends Component {
   render () {
     const { connectDragSource, isDragging } = this.props
     return connectDragSource(
-      <div style={{
-        opacity: isDragging ? 0.5 : 1,
-        fontSize: 25,
-        fontWeight: 'bold',
-        cursor: 'move'}}>
+      <div style={{opacity: isDragging ? 0.5 : 1}}
+        className='piece'>
         ♘
       </div>
     )
