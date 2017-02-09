@@ -24,9 +24,13 @@ class Board extends Component {
     const [wN1X, wN1Y] = pieces.knight.white[0]
     const [wN2X, wN2Y] = pieces.knight.white[1]
 
-    if ((x === wN1X && y === wN1Y) ||
-      (x === wN2X && y === wN2Y)) {
-      return <Knight />
+    // if ((x === wN1X && y === wN1Y) ||
+      // (x === wN2X && y === wN2Y)) {
+      // return <Knight />
+    // }
+
+    if (x === wN1X && y === wN1Y) {
+      return <Knight x={x} y={y} />
     }
   }
 
