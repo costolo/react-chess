@@ -1,4 +1,9 @@
 export const ItemTypes = {
-  KNIGHT: 'knight'
+  BISHOP: 'bishop',
+  KING: 'king',
+  KNIGHT: 'knight',
+  QUEEN: 'queen',
+  ROOK: 'rook',
+  PAWN: 'pawn'
 }
 
