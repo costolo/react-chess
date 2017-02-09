@@ -20,9 +20,10 @@ export function observe (o) {
   }
 
   observer = o
-  emitChange()
+  emitChange(ItemTypes.KNIGHT)
 }
 
+// TODO abstract piece movement into its own module
 export function canMoveKnight (toX, toY) {
   const [x, y] = knightPosition
   const dx = toX - x
