@@ -1,12 +1,15 @@
+import { pieces } from './PiecePositions'
 import { ItemTypes } from './Constants'
 
-let knightPosition = [1, 7]
+let wN1Pos = pieces.knight.white[0]
+let wN2Pos = pieces.knight.white[1]
 let observer = null
 
 function emitChange (itemType) {
   switch (itemType) {
     case 'knight':
-      observer(knightPosition)
+      observer(wN1Pos)
+      // observer(wN2Pos)
       break
     default:
       console.log('default in emit change switch')
@@ -24,7 +27,7 @@ export function observe (o) {
 
 // TODO abstract piece movement into its own module
 export function canMoveKnight (toX, toY) {
-  const [x, y] = knightPosition
+  const [x, y] = wN1Pos
   const dx = toX - x
   const dy = toY - y
 
@@ -35,6 +38,6 @@ export function canMoveKnight (toX, toY) {
 }
 
 export function moveKnight (toX, toY) {
-  knightPosition = [toX, toY]
+  wN1Pos = [toX, toY]
   emitChange(ItemTypes.KNIGHT)
 }
