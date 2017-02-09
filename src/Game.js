@@ -1,6 +1,6 @@
 import { ItemTypes } from './Constants'
 
-let knightPosition = [2, 7]
+let knightPosition = [1, 7]
 let observer = null
 
 function emitChange (itemType) {
