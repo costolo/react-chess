@@ -46,11 +46,7 @@ class Board extends Component {
     }
 
     return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexWrap: 'wrap'}}>
+      <div className='board'>
         {squares}
       </div>
     )

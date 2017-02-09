@@ -16,3 +16,11 @@ body {
   font-weight: bold;
   cursor: move;
 }
+
+.board {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
