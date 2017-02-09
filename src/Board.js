@@ -4,6 +4,7 @@ import HTML5Backend from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare'
 import Knight from './pieces/Knight'
 import { moveKnight, canMoveKnight } from './Game'
+import { pieces } from './PiecePositions'
 const { arrayOf, number } = React.PropTypes
 
 class Board extends Component {
