@@ -1,7 +1,6 @@
 import { ItemTypes } from './Constants'
-import Knight from './pieces/Knight'
 
-let knightPosition = Knight.positions.white[0]
+let knightPosition = [2, 7]
 let observer = null
 
 function emitChange (itemType) {
