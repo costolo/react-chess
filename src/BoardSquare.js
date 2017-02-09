@@ -6,16 +6,16 @@ import { DropTarget } from 'react-dnd'
 const { number, bool } = React.PropTypes
 
 const squareTarget = {
-  canDrop(props) {
+  canDrop (props) {
     return canMoveKnight(props.x, props.y)
   },
 
-  drop(props, monitor) {
+  drop (props, monitor) {
     moveKnight(props.x, props.y)
   }
 }
 
-function collect(connect, monitor) {
+function collect (connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),

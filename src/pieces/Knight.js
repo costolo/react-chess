@@ -22,15 +22,6 @@ class Knight extends Component {
     isDragging: bool
   }
 
-  static positions = {
-    white: [
-      [1, 7], [6, 7]
-    ],
-    black: [
-      [], []
-    ]
-  }
-
   render () {
     const { connectDragSource, isDragging } = this.props
     return connectDragSource(
