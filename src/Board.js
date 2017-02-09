@@ -4,7 +4,7 @@ import HTML5Backend from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare'
 import Knight from './pieces/Knight'
 import { moveKnight, canMoveKnight } from './Game'
-import { pieces } from './PiecePositions'
+// import { pieces } from './PiecePositions'
 const { arrayOf, number } = React.PropTypes
 
 class Board extends Component {
@@ -21,8 +21,9 @@ class Board extends Component {
   }
 
   renderPiece (x, y) {
-    const [wN1X, wN1Y] = pieces.knight.white[0]
-    const [wN2X, wN2Y] = pieces.knight.white[1]
+    const [wN1X, wN1Y] = this.props.knightPosition
+    // const [wN1X, wN1Y] = pieces.knight.white[0]
+    // const [wN2X, wN2Y] = pieces.knight.white[1]
 
     // if ((x === wN1X && y === wN1Y) ||
       // (x === wN2X && y === wN2Y)) {
