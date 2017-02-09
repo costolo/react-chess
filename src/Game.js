@@ -37,5 +37,5 @@ export function canMoveKnight (toX, toY) {
 
 export function moveKnight (toX, toY) {
   knightPosition = [toX, toY]
-  emitChange()
+  emitChange(ItemTypes.KNIGHT)
 }
