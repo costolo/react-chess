@@ -1,6 +1,6 @@
 import Knight from './pieces/Knight'
 
-let knightPosition = Knight.position
+let knightPosition = Knight.positions.white[0]
 let observer = null
 
 function emitChange () {
