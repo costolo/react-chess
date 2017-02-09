@@ -1,10 +1,17 @@
+import { ItemTypes } from './Constants'
 import Knight from './pieces/Knight'
 
 let knightPosition = Knight.positions.white[0]
 let observer = null
 
-function emitChange () {
-  observer(knightPosition)
+function emitChange (itemType) {
+  switch (itemType) {
+    case 'knight':
+      observer(knightPosition)
+      break
+    default:
+      console.log('default in emit change switch')
+  }
 }
 
 export function observe (o) {
