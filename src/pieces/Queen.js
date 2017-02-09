@@ -3,3 +3,10 @@ import { ItemTypes } from '../Contants'
 import { DragSource } from 'react-dnd'
 const { func, bool } = React.PropTypes
 
+class Queen extends Component {
+  render () {
+    return <div className='piece'>♕</div>
+  }
+}
+
+export default Queen
